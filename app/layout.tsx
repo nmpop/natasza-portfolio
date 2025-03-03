@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
+
+import { Libre_Baskerville } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const libre = Libre_Baskerville({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={cn("bg-makara-100", libre.variable)}>
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

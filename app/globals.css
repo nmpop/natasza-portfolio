@@ -7,6 +7,55 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Makara shades */
+  --color-makara-50: #f4f4f2;
+  --color-makara-100: #e4e2dd;
+  --color-makara-200: #cac7be;
+  --color-makara-300: #aca598;
+  --color-makara-400: #948a7b;
+  --color-makara-500: #877c6e;
+  --color-makara-600: #72675c;
+  --color-makara-700: #5c534c;
+  --color-makara-800: #504743;
+  --color-makara-900: #473f3c;
+  --color-makara-950: #272321;
+
+  /* Dove Gray shades */
+  --color-dove-gray-50: #f5f5f6;
+  --color-dove-gray-100: #e6e6e7;
+  --color-dove-gray-200: #d1cfd2;
+  --color-dove-gray-300: #b0aeb2;
+  --color-dove-gray-400: #88858b;
+  --color-dove-gray-500: #68666b;
+  --color-dove-gray-600: #5d5b5f;
+  --color-dove-gray-700: #4f4d51;
+  --color-dove-gray-800: #454446;
+  --color-dove-gray-900: #3c3c3d;
+  --color-dove-gray-950: #272527;
+}
+
+.underline-effect {
+  position: relative;
+  padding: 0;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: theme(--color-dove-gray-400);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-effect:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 :root {

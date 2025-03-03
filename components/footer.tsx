@@ -3,7 +3,7 @@ import React, { JSX, SVGProps } from "react";
 const navigation = [
   {
     name: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/natasza-popielarczyk/",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 448 512" {...props}>
         <path
@@ -15,7 +15,7 @@ const navigation = [
   },
   {
     name: "GitHub",
-    href: "#",
+    href: "https://github.com/nmpop",
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -31,10 +31,10 @@ const navigation = [
 export default function Footer() {
   return (
     <footer>
-      <div className="container flex max-w-4xl">
+      <div className="container mx-auto flex max-w-5xl flex-col items-center justify-between">
         <span>Designed & Built by Natasza Popielarczyk.</span>
         <span>&copy; {new Date().getFullYear()}. All rights reserved.</span>
-        <div>
+        <div className="flex gap-2">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -42,7 +42,6 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <span>{item.name}</span>
               <item.icon className="h-5 w-5" />
             </a>
           ))}
