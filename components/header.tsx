@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 mb-14 w-full py-5 backdrop-blur-xl">
+    <header className="fixed top-0 z-10 mb-14 w-full py-5 backdrop-blur-xl">
       <nav className="container mx-auto flex max-w-5xl items-center justify-between">
         <div>
           <Link href="/" className="font-serif text-4xl">
